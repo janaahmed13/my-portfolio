@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Jana</title>
+    <link rel="stylesheet" href="styel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+   
+   
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1000; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0,0,0,0.8); 
+            backdrop-filter: blur(5px);
+        }
+        .modal-content {
+            background-color: #1e1e1e;
+            color: #fff;
+            margin: 15% auto; 
+            padding: 25px;
+            border-radius: 12px;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            position: relative;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close-btn:hover { color: #fff; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Jana</a>
+        <nav class="navigation">
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contacts">Contacts</a>
+        </nav>
+    </header>
+
+    <section class="main">
+        <div>
+            <h2>Hello, I'm Jana<br><span>I'm Software Developer</span></h2>
+            <h3>I build amazing programs and websites</h3>
+            <a href="#projects" class="main-btn">View my work</a>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2 class="title">My Skills</h2>
+        <div class="content">
+            <div class="skill-card">
+                <div class="icon"><i class="fab fa-html5"></i></div>
+                <div class="info">
+                    <h3>HTML5</h3>
+                    <p>Building structured web content.</p>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="icon"><i class="fab fa-css3-alt"></i></div>
+                <div class="info">
+                    <h3>CSS3 & Flexbox</h3>
+                    <p>Styling web pages with modern layouts.</p>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="icon"><i class="fab fa-python"></i></div>
+                <div class="info">
+                    <h3>Python</h3>
+                    <p>Writing backend logic and algorithms.</p>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+                <div class="info">
+                    <h3>Flutter & Dart</h3>
+                    <p>Developing cross-platform applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="title">My Projects</h2>
+        <div class="content"> 
+            
+      
+            <div class="projects-card">
+                <div class="card-main-content yellow-bg">
+                    <div class="projects-image">
+                        <a href="javascript:void(0)" onclick="openModal('movieModal')">
+                            <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=800&auto=format&fit=crop" alt="Responsive Movie Website">
+                        </a>
+                    </div>
+                    <div class="projects-banner">
+                        <h2>Responsive Movie Website</h2>
+                        <div class="tech-icons">
+                            <i class="fab fa-html5 html-icon"></i>
+                            <i class="fab fa-css3-alt css-icon"></i>
+                            <div class="js-box">JS</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects-info">
+                    <p class="projects-category">Web Development</p>
+                    <strong class="projects-title">
+                        <span>Movie Website</span>
+                        <a href="javascript:void(0)" onclick="openModal('movieModal')" class="more-details">More details</a>
+                    </strong>
+                </div>
+            </div>
+
+       
+            <div class="projects-card">
+                <div class="card-main-content blue-bg">
+                    <div class="projects-image">
+                        <a href="javascript:void(0)" onclick="openModal('todoModal')">
+                            <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=800&auto=format&fit=crop" alt="To-Do List App">
+                        </a>
+                    </div>
+                    <div class="projects-banner">
+                        <h2>Task Tracker & To-Do App</h2>
+                        <div class="tech-icons">
+                            <i class="fas fa-mobile-alt flutter-icon"></i>
+                            <span class="tech-text">Flutter</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects-info">
+                    <p class="projects-category">Mobile App</p>
+                    <strong class="projects-title">
+                        <span>To-Do List App</span>
+                        <a href="javascript:void(0)" onclick="openModal('todoModal')" class="more-details">More details</a>
+                    </strong>
+                </div>
+            </div>
+
+           
+            <div class="projects-card">
+                <div class="card-main-content purple-bg">
+                    <div class="projects-image">
+                        <a href="javascript:void(0)" onclick="openModal('schoolModal')">
+                            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800&auto=format&fit=crop" alt="Smart School System">
+                        </a>
+                    </div>
+                    <div class="projects-banner">
+                        <h2>Smart School Management</h2>
+                        <div class="tech-icons">
+                            <i class="fas fa-graduation-cap school-icon"></i>
+                            <i class="fab fa-python python-icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects-info">
+                    <p class="projects-category">Software Project</p>
+                    <strong class="projects-title">
+                        <span>Smart School</span>
+                        <a href="javascript:void(0)" onclick="openModal('schoolModal')" class="more-details">More details</a>
+                    </strong>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="movieModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('movieModal')">&times;</span>
+            <h2 style="color: #f39c12;">Movie Website</h2>
+            <p>مشروع موقع إلكتروني للأفلام يعرض التريلرات والتفاصيل متجاوب مع جميع الشاشات باستخدام HTML5, CSS3, و JavaScript.</p>
+        </div>
+    </div>
+
+    <div id="todoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('todoModal')">&times;</span>
+            <h2 style="color: #3498db;">To-Do List App</h2>
+            <p>تطبيق لتنظيم المهام والأنشطة اليومية تم تطويره وتصميمه باستخدام Flutter & Dart.</p>
+        </div>
+    </div>
+
+    <div id="schoolModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('schoolModal')">&times;</span>
+            <h2 style="color: #9b59b6;">Smart School System</h2>
+            <p>نظام إداري برمجي لمساعدة المدارس في تنظيم بيانات الطلاب والصفوف باستخدام Python.</p>
+        </div>
+    </div>
+
+
+</body>
+</html>
